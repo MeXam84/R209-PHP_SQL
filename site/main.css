@@ -4,31 +4,64 @@ body {
     font-family: Arial, sans-serif;
   }
   
+  /* Barre de navigation */
   .navbar {
     position: fixed;
     top: 0;
-    width: 95%;
+    width: 100%;
+    height: 60px; /* hauteur fixe */
     background-color: #555;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 5px;
     color: white;
     z-index: 1000;
   }
+  
+  /* Icônes à gauche et à droite */
   .nav-left i,
   .nav-right i {
     font-size: 24px;
-    margin: 0 10px;
+    margin: 0 5px;
     cursor: pointer;
   }
   
+  /* Logo au centre */
   .nav-center .logo {
-    height: 100px;
+    height: 80px;
   }
   
+  /* Regrouper les icônes de droite */
   .nav-right {
     display: flex;
     align-items: center;
   }
   
+  .container {
+    padding-top: 80px; /* espace pour la navbar */
+    text-align: center;
+    left: 0;
+    right: 0;
+   }
+  
+.main {
+    padding-top: 80px; /* espace pour la navbar */
+    position:relative;
+    width: 300px;
+    min-height: 60px;
+    margin: auto;
+    padding-top:15px;
+  }
+  
+  .main:before {
+    text-align: center;
+    content:'';
+    position: absolute;
+    width: 400px;
+    height: 140px;
+    margin: auto;
+    z-index: -1;
+    background-color:lightgray;
+    left:40px;
+  }
