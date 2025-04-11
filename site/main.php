@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-<link ref="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div id="header"><title>Index</title> </div>
+    <div id="header"> <img src="logo.png" width= 30% class="center"> </div>
 </head>
 <body>
     <p>Test</p>
