@@ -12,12 +12,12 @@
       <i class="fa fa-home"></i>
     </div>
     <div class="nav-center">
-      <a href="main.php" class="logo-link">
-      <img src="logo.png" alt="Logo" class="logo">
-  </a>  
+    <a href="main.php" style="height: 90px;">  
+    <img src="logo.png" alt="Logo" class="logo">
+</a>   
         </div>
-    <div class="nav-right"> 
-      <i class="fa fa-search"></i> 
+    <div class="nav-right">
+      <i class="fa fa-search"></i>
       <a href="panier.php" style="color: white;">
       <i class="fa fa-shopping-cart"></i>
 </a>
@@ -29,11 +29,16 @@
 
   <div class="container">
     <div class="main">
-    <h1>
-      This is the title
-    </h1>
-    <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
-    
+    <h1>Connexion</h1>
+    <h3>Login</h3>
+    <input type="text" placeholder="Nom d'utilisateur" name="username" required>
+    <br>
+    <h3>Mot de passe</h3>
+    <input type="password" placeholder="Mot de passe" name="password" required>
+    <br>
+    <br>
+    <button type="submit">Se connecter</button>
+
   </div>
 </div>
 

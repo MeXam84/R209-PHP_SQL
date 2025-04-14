@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" href="main.css">
@@ -18,9 +19,7 @@
         </div>
     <div class="nav-right"> 
       <i class="fa fa-search"></i> 
-      <a href="panier.php" style="color: white;">
       <i class="fa fa-shopping-cart"></i>
-</a>
       <a href="login.php" style="color: white;">
   <i class="fa fa-user-circle"></i>
 </a>
@@ -28,14 +27,16 @@
   </header>
 
   <div class="container">
-    <div class="main">
-    <h1>
-      This is the title
-    </h1>
-    <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
-    
+    <div class="static-part">
+      <h3>Partie Statique</h3>
+    </div>
+    <div class="dynamic-part">
+      <div class="widget">Widget 1</div>
+      <div class="widget">Widget 2</div>
+      <div class="widget">Widget 3</div>
+      <!-- Ajoute ici plus de widgets pour voir l'agrandissement -->
+    </div>
   </div>
-</div>
 
 
 </body>
