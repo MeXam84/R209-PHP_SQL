@@ -10,7 +10,9 @@
 <body> 
 <header class="navbar">
     <div class="nav-left">
+    <a href="main.php" style="color: white;">
       <i class="fa fa-home"></i>
+</a> 
     </div>
     <div class="nav-center">
       <a href="main.php" class="logo-link">
