@@ -2,10 +2,11 @@
 CREATE TABLE IF NOT EXISTS `Artiste` (
 	`Id_artiste` integer primary key NOT NULL UNIQUE IDENTITY,
 	`Nom_artiste` TEXT NOT NULL,
+	'Description' TEXT  NOT NULL
 FOREIGN KEY(`Id_artiste`) REFERENCES `Music`(`Id_artiste`)
 );
 
-INSERT INTO Artiste (Nom_artiste) VALUES ('Denga')
+INSERT INTO Artiste (Nom_artiste, Description) VALUES ('Denga', 'TEST')
 
 /* CREATE TABLE IF NOT EXISTS `Album` (
 	`Id_album` integer primary key NOT NULL UNIQUE IDENTITY,
@@ -20,7 +21,6 @@ FOREIGN KEY(`Id_album`) REFERENCES `Music`(`Id_album`)
 CREATE TABLE IF NOT EXISTS `Music` (
 	`Id_music` integer primary key NOT NULL UNIQUE IDENTITY,
 	`Nom_music` TEXT NOT NULL,
-	`Id_album` INTEGER NOT NULL,
 	`Id_artiste` INTEGER NOT NULL,
 	`Prix` TEXT NOT NULL,
 	`Style` TEXT NOT NULL,
@@ -28,6 +28,8 @@ CREATE TABLE IF NOT EXISTS `Music` (
 FOREIGN KEY(`Id_music`) REFERENCES `Panier`(`Id_music`),
 FOREIGN KEY(`Id_artiste`) REFERENCES `Album`(`Id_artiste`)
 );
+
+INSERT INTO Music (Nom_music, Id_artiste, Prix, Style, Description) VALUES ('Le Chauve', 1, '100€', 'Pop', 'TEST')
 
 /* Création de la table "Uttilisateurs"*/
 CREATE TABLE IF NOT EXISTS `Users` (
