@@ -5,14 +5,16 @@ CREATE TABLE IF NOT EXISTS `Artiste` (
 FOREIGN KEY(`Id_artiste`) REFERENCES `Music`(`Id_artiste`)
 );
 
-CREATE TABLE IF NOT EXISTS `Album` (
+INSERT INTO Artiste (Nom_artiste) VALUES ('Denga')
+
+/* CREATE TABLE IF NOT EXISTS `Album` (
 	`Id_album` integer primary key NOT NULL UNIQUE IDENTITY,
 	`Nom_album` TEXT NOT NULL,
 	`Id_artiste` INTEGER NOT NULL,
 	`Date_sortie` TEXT NOT NULL,
 	`Description` TEXT NOT NULL,
 FOREIGN KEY(`Id_album`) REFERENCES `Music`(`Id_album`)
-);
+); */
 
 /* Création de la table produit "Music"*/
 CREATE TABLE IF NOT EXISTS `Music` (
