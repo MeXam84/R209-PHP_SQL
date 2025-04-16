@@ -39,7 +39,7 @@ if (isset($_SESSION['username'])) {
 
   <div class="container">
     <div class="main">
-    <form method="POST" action="script _login.php">
+    <form method="POST" action="script_login.php">
         <label>Login:</label>
         <input type="text" name="username" required><br><br>
 
