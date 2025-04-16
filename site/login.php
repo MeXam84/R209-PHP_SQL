@@ -9,21 +9,21 @@
 <body> 
 <header class="navbar">
     <div class="nav-left">
-    <a href="main.php" style="color: white;">
+    <a href="main.php" style="color: #191970;">
       <i class="fa fa-home"></i>
-</a>  
+</a> 
     </div>
     <div class="nav-center">
-    <a href="main.php" style="height: 90px;">  
-    <img src="logo.png" alt="Logo" class="logo">
-</a>   
+      <a href="main.php" class="logo-link">
+      <img src="logo.png" alt="Logo" class="logo">
+  </a>  
         </div>
-    <div class="nav-right">
-      <i class="fa fa-search"></i>
-      <a href="panier.php" style="color: white;">
+    <div class="nav-right"> 
+      <i class="fa fa-search" style="color: #242124;"></i> 
+      <a href="panier.php" style="color: #242124;">
       <i class="fa fa-shopping-cart"></i>
 </a>
-      <a href="login.php" style="color: white;">
+      <a href="login.php" style="color: #242124;">
   <i class="fa fa-user-circle"></i>
 </a>
     </div>
@@ -44,6 +44,11 @@
   </div>
 </div>
 
+  <div class="rect-footer">
+    <footer>
+      <p>© 2023 Mon Site Web. Tous droits réservés.</p>
+    </footer>
+  </div>
 
 </body>
 </html>

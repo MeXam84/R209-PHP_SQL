@@ -10,7 +10,7 @@
 <body> 
 <header class="navbar">
     <div class="nav-left">
-    <a href="main.php" style="color: white;">
+    <a href="main.php" style="color: #191970;">
       <i class="fa fa-home"></i>
 </a> 
     </div>
@@ -20,9 +20,11 @@
   </a>  
         </div>
     <div class="nav-right"> 
-      <i class="fa fa-search"></i> 
+      <i class="fa fa-search" style="color: #242124;"></i> 
+      <a href="panier.php" style="color: #242124;">
       <i class="fa fa-shopping-cart"></i>
-      <a href="login.php" style="color: white;">
+</a>
+      <a href="login.php" style="color: #242124;">
   <i class="fa fa-user-circle"></i>
 </a>
     </div>
@@ -40,6 +42,11 @@
     </div>
   </div>
 
+  <div class="rect-footer">
+    <footer>
+      <p>© 2023 Mon Site Web. Tous droits réservés.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
