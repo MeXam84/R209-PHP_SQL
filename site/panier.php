@@ -10,7 +10,7 @@
 <body> 
 <header class="navbar">
     <div class="nav-left">
-    <a href="main.php" style="color: #191970;">
+    <a href="main.php" style="color: #242124;">
       <i class="fa fa-home"></i>
 </a> 
     </div>
@@ -32,12 +32,13 @@
 
   <div class="container">
     <div class="static-part">
-      <h3>Partie Statique</h3>
+      <h3>Mon panier</h3>
     </div>
     <div class="dynamic-part">
       <div class="widget">Widget 1</div>
       <div class="widget">Widget 2</div>
       <div class="widget">Widget 3</div>
+      
       <!-- Ajoute ici plus de widgets pour voir l'agrandissement -->
     </div>
   </div>
