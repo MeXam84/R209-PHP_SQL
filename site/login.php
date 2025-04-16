@@ -11,10 +11,10 @@ if(isset($_POST['connexion'])){
     } else {
       $NomUser = htmlentities($_POST['username'], ENT_QUOTES, "UTF-8");
       $Password = htmlentities($_POST['password'], ENT_QUOTES, "UTF-8");
-      $Db = new SQLite3('SQL.db');
+      $Db = sqlite_open('SQL.db');
 
-      $Resultat = $Db->query("SELECT * FROM users WHERE Nom_users = '".$NomUser."' AND Password = '".$Password."'");
-      if($Resultat->numRows() == 0){
+      $Resultat = sqlite_query($Db, "SELECT * FROM users WHERE Nom_users = '".$NomUser."' AND Password = '".$Password."'");
+      if(sqlite_num_rows($Resultat) == 0){
         echo "Nom d'uttilisateur ou mot-de-pass Incorect";
       } else {
         $_SESSION['username'] = $NomUser;
