@@ -20,3 +20,4 @@ if (isset($users[$username]) && $users[$username] === $password) {
     header('Location: login.php?error=1');
     exit;
 }
+?>

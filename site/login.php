@@ -1,27 +1,8 @@
 <?php
-
 session_start();
-
-if(isset($_POST['connexion'])){
-  if(empty($_POST['username'])){
-    echo "Renseignez un nom d'uttilisateur";
-  } else {
-    if(empty($_POST['password'])){
-      echo "Renseignez le mot-de-passe";
-    } else {
-      $NomUser = htmlentities($_POST['username'], ENT_QUOTES, "UTF-8");
-      $Password = htmlentities($_POST['password'], ENT_QUOTES, "UTF-8");
-      $Db = sqlite_open('SQL.db');
-
-      $Resultat = sqlite_query($Db, "SELECT * FROM users WHERE Nom_users = '".$NomUser."' AND Password = '".$Password."'");
-      if(sqlite_num_rows($Resultat) == 0){
-        echo "Nom d'uttilisateur ou mot-de-pass Incorect";
-      } else {
-        $_SESSION['username'] = $NomUser;
-        echo "Connexion réussit !";
-      }
-    }
-  }
+if (isset($_SESSION['username'])) {
+    header('Location: dashboard.php');
+    exit;
 }
 ?>
 
@@ -58,15 +39,18 @@ if(isset($_POST['connexion'])){
 
   <div class="container">
     <div class="main">
-    <h1>Connexion</h1>
-    <h3>Login</h3>
-    <input type="text" placeholder="Nom d'utilisateur" name="username" required>
-    <br>
-    <h3>Mot de passe</h3>
-    <input type="password" placeholder="Mot de passe" name="password" required>
-    <br>
-    <br>
-    <button type="submit" name="connexion">Se connecter</button>
+    <form method="POST" action="script _login.php">
+        <label>Login:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Mot de passe:</label>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Se connecter</button>
+    </form>
+    <?php if (isset($_GET['error'])): ?>
+        <p style="color:red;">Identifiants incorrects.</p>
+    <?php endif; ?>
 
   </div>
 </div>
