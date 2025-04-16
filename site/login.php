@@ -1,3 +1,30 @@
+<?php
+
+session_start();
+
+if(isset($_POST['connexion'])){
+  if(empty($_POST['username'])){
+    echo "Renseignez un nom d'uttilisateur";
+  } else {
+    if(empty($_POST['password'])){
+      echo "Renseignez le mot-de-passe";
+    } else {
+      $NomUser = htmlentities($_POST['username'], ENT_QUOTES, "UTF-8");
+      $Password = htmlentities($_POST['password'], ENT_QUOTES, "UTF-8");
+      $Db = new SQLite3('SQL.db');
+
+      $Resultat = $Db->query("SELECT * FROM users WHERE Nom_users = '".$NomUser"' AND Password = '".$Password"'");
+      if($Resultat->numRows() == 0){
+        echo "Nom d'uttilisateur ou mot-de-pass Incorect";
+      } else {
+        $_SESSION['username'] = $NomUser;
+        echo "Connexion réussit !"
+      }
+    }
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" href="main.css">
@@ -39,7 +66,7 @@
     <input type="password" placeholder="Mot de passe" name="password" required>
     <br>
     <br>
-    <button type="submit">Se connecter</button>
+    <button type="submit" name="connexion">Se connecter</button>
 
   </div>
 </div>
