@@ -9,7 +9,7 @@
 <body> 
 <header class="navbar">
     <div class="nav-left">
-    <a href="main.php" style="color: #191970;">
+    <a href="main.php" style="color: #242124;">
       <i class="fa fa-home"></i>
 </a> 
     </div>
