@@ -45,7 +45,7 @@
 
   <div class="rect-footer">
     <footer>
-      <p>© 2023 Mon Site Web. Tous droits réservés.</p>
+      <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>
   </div>
 
