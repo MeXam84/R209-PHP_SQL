@@ -35,6 +35,7 @@
       This is the title
     </h1>
     <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
+    <a href="catalogue.php">accès au catalogue</a>
     
   </div>
 </div>
