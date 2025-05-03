@@ -51,9 +51,9 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
     <div class="catalogue">
         <?php foreach ($produits as $produit): ?>
             <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
-                <img src="img_music/<?php echo htmlspecialchars($produit['image']); ?>">
+                <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
                 <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
-                <!-- <div class="prix"><?php echo number_format($produit['Prix'], 2); ?></div> -->
+                <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
             </a>
         <?php endforeach; ?>
     </div>
