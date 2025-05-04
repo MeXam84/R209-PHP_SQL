@@ -28,6 +28,13 @@ if (!$produit) {
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($produit['Nom_music']); ?></title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .produit { background-color: white; width: 300px; margin: 50px auto; border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
+        img { max-width: 100%; height: auto; }
+        .prix { font-size: 24px; color: green; }
+        .bouton-panier { background-color: #28a745; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; }
+    </style>
 </head>
 <body>
     <div class="produit">
