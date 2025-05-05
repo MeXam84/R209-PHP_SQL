@@ -43,8 +43,7 @@ if (!$produit) {
 </head>
 <body>
     <div class="produit">
-        <h2><?php echo htmlspecialchars($produit['Nom_music']); ?></h2>
-        <a href="artiste.php?id=<?php echo $produit['Id_artiste']; ?>"><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></a>
+        <h2><?php echo htmlspecialchars($produit['Nom_music']); ?> - <a style="text-decoration:none; color:inherit" href="artiste.php?id=<?php echo $produit['Id_artiste']; ?>"><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></a></h2>
         <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png" alt="<?php echo htmlspecialchars($produit['Nom_music']); ?>">
         <p><?php echo htmlspecialchars($produit['Description']); ?></p>
         <audio controls src="song/<?php echo htmlspecialchars($produit['Id_music']); ?>.mp3"></audio>

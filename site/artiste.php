@@ -26,7 +26,7 @@ if (!$artiste) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo htmlspecialchars($produit['Nom_artiste']); ?></title>
+    <title><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></title>
     <link rel="stylesheet" href="main.css">
     <style>
         body { font-family: Arial, sans-serif; }
@@ -36,9 +36,9 @@ if (!$artiste) {
 </head>
 <body>
     <div class="artiste">
-        <h2><?php echo htmlspecialchars($produit['Nom_artiste']); ?></h2>
-        <img src="img_art/<?php echo htmlspecialchars($produit['Id_artiste']); ?>.png" alt="<?php echo htmlspecialchars($produit['Nom_artiste']); ?>">
-        <p><?php echo htmlspecialchars($produit['Description']); ?></p>
+        <h2><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></h2>
+        <img src="img_art/<?php echo htmlspecialchars($artiste['Id_artiste']); ?>.png" alt="<?php echo htmlspecialchars($artiste['Nom_artiste']); ?>">
+        <p><?php echo htmlspecialchars($artiste['Description']); ?></p>
     </div>
 </body>
 </html>
