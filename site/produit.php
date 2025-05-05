@@ -16,6 +16,11 @@ $requete->bindParam(':id', $id, PDO::PARAM_INT);
 $requete->execute();
 $produit = $requete->fetch(PDO::FETCH_ASSOC);
 
+$requete = $db->prepare('SELECT * FROM Artiste WHERE Id_artiste = :id');
+$requete->bindParam(':id', $produit['Id_artiste'], PDO::PARAM_INT);
+$requete->execute();
+$artiste = $requete->fetch(PDO::FETCH_ASSOC);
+
 // Si le produit n'existe pas
 if (!$produit) {
     die('Produit non trouvé.');
@@ -39,6 +44,7 @@ if (!$produit) {
 <body>
     <div class="produit">
         <h2><?php echo htmlspecialchars($produit['Nom_music']); ?></h2>
+        <a href="artiste.php?id=<?php echo $produit['Id_artiste']; ?>"><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></a>
         <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png" alt="<?php echo htmlspecialchars($produit['Nom_music']); ?>">
         <p><?php echo htmlspecialchars($produit['Description']); ?></p>
         <audio controls src="song/<?php echo htmlspecialchars($produit['Id_music']); ?>.mp3"></audio>
