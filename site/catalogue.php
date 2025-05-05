@@ -51,6 +51,10 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
             </a>
         <?php endforeach; ?>
     </div>
-
+    <div class="rect-footer">
+    <footer>
+      <p>© 2025 Music.ia. Tous droits réservés.</p>
+    </footer>
+  </div>
 </body>
 </html>

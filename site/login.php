@@ -47,6 +47,8 @@ if (isset($_SESSION['username'])) {
         <input type="password" name="password" required><br><br>
 
         <button type="submit">Se connecter</button>
+
+        <p>Pas encore de compte? <a href="register.php">Inscrivez-vous ici</a></p>
     </form>
     <?php if (isset($_GET['error'])): ?>
         <p style="color:red;">Identifiants incorrects.</p>

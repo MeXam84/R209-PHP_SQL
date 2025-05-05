@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Connexion à la base de données SQLite
+// Connexion à la base de données
 $pdo = new PDO('sqlite:SQL.db');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -9,19 +9,25 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
-// Vérification dans la base
+// Vérifie si les champs sont vides
+if (empty($username) || empty($password)) {
+    header('Location: login.php?error=empty');
+    exit;
+}
+
+// Recherche l'utilisateur dans la base de données
 $stmt = $pdo->prepare('SELECT * FROM Users WHERE Nom_users = ?');
 $stmt->execute([$username]);
 $user = $stmt->fetch();
 
-
-// Vérifie si les identifiants sont valides
-if ($user && $password === $user['Password']) {
+// Vérifie si l'utilisateur existe et si le mot de passe est correct
+if ($user && password_verify($password, $user['Password'])) {
+    // Connexion réussie, démarrer la session et rediriger
     $_SESSION['username'] = $username;
     header('Location: dashboard.php');
     exit;
 } else {
-    header('Location: login.php?error=1');
+    // Identifiants incorrects, redirige vers login avec message d'erreur
+    header('Location: login.php?error=invalid_credentials');
     exit;
 }
-?>

@@ -33,6 +33,8 @@ if (!$produit) {
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($produit['Nom_music']); ?></title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         body { font-family: Arial, sans-serif; }
         .produit { background-color: white; width: 300px; margin: 50px auto; border: 1px solid #ccc; padding: 15px; border-radius: 8px; }
@@ -42,8 +44,30 @@ if (!$produit) {
     </style>
 </head>
 <body>
+<header class="navbar">
+    <div class="nav-left">
+    <a href="main.php" style="color: #242124;">
+      <i class="fa fa-home"></i>
+</a> 
+    </div>
+    <div class="nav-center">
+      <a href="main.php" class="logo-link">
+      <img src="logo.png" alt="Logo" class="logo">
+  </a>  
+        </div>
+    <div class="nav-right"> 
+      <i class="fa fa-search" style="color: #242124;"></i> 
+      <a href="panier.php" style="color: #242124;">
+      <i class="fa fa-shopping-cart"></i>
+</a>
+      <a href="login.php" style="color: #242124;">
+  <i class="fa fa-user-circle"></i>
+</a>
+    </div>
+  </header>     
     <div class="produit">
-        <h2><?php echo htmlspecialchars($produit['Nom_music']); ?> - <a style="text-decoration:none; color:inherit" href="artiste.php?id=<?php echo $produit['Id_artiste']; ?>"><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></a></h2>
+        <h2><?php echo htmlspecialchars($produit['Nom_music']); ?></h2>
+        <a href="artiste.php?id=<?php echo $produit['Id_artiste']; ?>"><?php echo htmlspecialchars($artiste['Nom_artiste']); ?></a>
         <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png" alt="<?php echo htmlspecialchars($produit['Nom_music']); ?>">
         <p><?php echo htmlspecialchars($produit['Description']); ?></p>
         <audio controls src="song/<?php echo htmlspecialchars($produit['Id_music']); ?>.mp3"></audio>
@@ -53,5 +77,10 @@ if (!$produit) {
             <button type="submit" class="bouton-panier">Ajouter au panier</button>
         </form>
     </div>
+    <div class="rect-footer">
+    <footer>
+      <p>© 2025 Music.ia. Tous droits réservés.</p>
+    </footer>
+  </div>
 </body>
 </html>
