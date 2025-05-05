@@ -14,39 +14,33 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <title>Catalogue</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
-        .catalogue { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .carte-produit {
-            background-color: white;
-            width: 250px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 15px;
-            text-decoration: none;
-            color: inherit;
-        }
-        .carte-produit img {
-            width: 100%;
-            height: auto;
-        }
-        .nom-produit {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .prix {
-            font-size: 16px;
-            color: green;
-        }
-    </style>
-</head>
+ </head>
 <body>
-
+<header class="navbar">
+    <div class="nav-left">
+    <a href="main.php" style="color: #242124;">
+      <i class="fa fa-home"></i>
+</a> 
+    </div>
+    <div class="nav-center">
+      <a href="main.php" class="logo-link">
+      <img src="logo.png" alt="Logo" class="logo">
+  </a>  
+        </div>
+    <div class="nav-right"> 
+      <i class="fa fa-search" style="color: #242124;"></i> 
+      <a href="panier.php" style="color: #242124;">
+      <i class="fa fa-shopping-cart"></i>
+</a>
+      <a href="login.php" style="color: #242124;">
+  <i class="fa fa-user-circle"></i>
+</a>
+    </div>
+  </header>
     <h1 style="text-align:center;">Catalogue de produits</h1>
     <div class="catalogue">
         <?php foreach ($produits as $produit): ?>
