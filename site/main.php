@@ -36,7 +36,6 @@
     </h1>
     <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
     <a href="catalogue.php">accès au catalogue</a>
-    <a href="artiste.php">accès au artiste</a>
     
   </div>
 </div>

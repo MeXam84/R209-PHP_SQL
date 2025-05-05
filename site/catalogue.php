@@ -40,18 +40,18 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
   <i class="fa fa-user-circle"></i>
 </a>
     </div>
-  </header>
-    <h1 style="text-align:center;">Catalogue de produits</h1>
-    <div class="catalogue">
-        <?php foreach ($produits as $produit): ?>
-            <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
-                <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
-                <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
-                <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
-            </a>
-        <?php endforeach; ?>
-    </div>
-    <div class="rect-footer">
+</header>
+  <h1 style="text-align:center;">Catalogue de produits</h1>
+  <div class="catalogue">
+    <?php foreach ($produits as $produit): ?>
+    <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
+    <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
+    <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
+    <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
+    </a>
+  <?php endforeach; ?>
+  </div>
+  <div class="rect-footer">
     <footer>
       <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>
