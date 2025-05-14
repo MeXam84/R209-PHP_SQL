@@ -1,3 +1,12 @@
+<?php
+// Connexion à la base SQLite
+$db = new PDO('sqlite:SQL.db');
+
+// Préparer et exécuter la requête pour récupérer 3 produits aléatoires
+$stmt = $db->query('SELECT * FROM Music ORDER BY RANDOM() LIMIT 3');
+$produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <link rel="stylesheet" href="main.css">
@@ -31,15 +40,31 @@
 
   <div class="page"> <!-- DOIT contenir le contenu + footer -->
     <main class="main">
-      <h1>This is the title</h1>
+      <h1>Bienvenue sur Music.ia</h1>
       <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
-      <a href="catalogue.php">accès au catalogue</a>
     </main>
+
+
+<!-- Top Vente -->
+ <h1 style="text-align:center;">Meilleur Vente</h1> 
+    <div class="catalogue">
+        <?php foreach ($produits as $produit): ?>
+            <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
+                <h3 class="nom-produit"><?= htmlspecialchars($produit['Nom_music']) ?></h3>
+                <img src="img_music/<?= htmlspecialchars($produit['Id_music']) ?>.png" alt="<?= htmlspecialchars($produit['Nom_music']) ?>">
+                <p class="prix"><?= htmlspecialchars($produit['Prix']) ?></p>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
+<div class="bouton-container">
+  <a href="catalogue.php" class="bouton-plus">Voir plus</a>
+</div>
+</div>
+<br>
 
     <footer class="rect-footer">
       <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>
-  </div>
-  
 </body>
 </html>
