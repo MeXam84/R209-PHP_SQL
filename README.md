@@ -18,16 +18,16 @@ Nom du site : **music.ai.fr**
 
 ### Ce qu’il faut absolument faire :
 
-- articles, catégories, affichage liste, affichage fiche article
+- articles, catégories, affichage liste, affichage fiche article [color=green]Fait ![/color]
 - accès administrateur pour ajouter/supprimer des articles, des catégories, des utilisateurs,. . .
 - gestion paniers clients
 - accès gestionnaire pour visualiser les commandes, les valider,. . .
-- toutes les pages doivent être dynamiques (c’est-à-dire générées par des scripts PHP)
+- toutes les pages doivent être dynamiques (c’est-à-dire générées par des scripts PHP) [color=green]Fait ![/color]
 
 ### Ce qui est optionnel :
 
 - sous-catégories
-- photos des articles
+- photos des articles [color=green]Fait ![/color]
 - moteur de recherche
 - filtres pour la recherche (ex : par marque, prix compris entre xxx et xxx)
 - avis des utilisateurs
