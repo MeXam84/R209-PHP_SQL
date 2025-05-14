@@ -37,3 +37,7 @@ Nom du site : **music.ai.fr**
 - connexion à un site bancaire pour le paiement du panier
 - envoi de mails pour le suivi de commande
 - classement des articles selon le ranking des clients
+
+
+> [!IMPORTANT]
+> Le projet n'est pas encore fini est le sera très bientôt...
