@@ -63,10 +63,9 @@ if (!$artiste) {
         <img src="img_art/<?php echo htmlspecialchars($artiste['Id_artiste']); ?>.png" alt="<?php echo htmlspecialchars($artiste['Nom_artiste']); ?>">
         <p><?php echo htmlspecialchars($artiste['Description']); ?></p>
     </div>
-    <div class="rect-footer">
-    <footer>
-      <p>© 2025 Music.ia. Tous droits réservés.</p>
-    </footer>
-  </div>
+<!-- FOOTER CORRECTEMENT STRUCTURÉ -->
+<footer class="rect-footer">
+  <p>© 2025 Music.ia. Tous droits réservés.</p>
+</footer>
 </body>
 </html>

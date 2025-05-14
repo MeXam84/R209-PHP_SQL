@@ -43,11 +43,9 @@
     </div>
   </div>
 
-  <div class="rect-footer">
-    <footer>
-      <p>© 2025 Music.ia. Tous droits réservés.</p>
-    </footer>
-  </div>
-
+ <!-- FOOTER CORRECTEMENT STRUCTURÉ -->
+<footer class="rect-footer">
+  <p>© 2025 Music.ia. Tous droits réservés.</p>
+</footer>
 </body>
 </html>

@@ -42,19 +42,21 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </header>
   <h1 style="text-align:center;">Catalogue de produits</h1>
+<!-- CONTENU DE LA PAGE -->
+<main>
+  <h1 style="text-align:center;">Catalogue de produits</h1>
   <div class="catalogue">
     <?php foreach ($produits as $produit): ?>
-    <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
-    <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
-    <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
-    <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
-    </a>
-  <?php endforeach; ?>
+      <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
+        <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
+        <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
+        <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
+      </a>
+    <?php endforeach; ?>
   </div>
-  <div class="rect-footer">
-    <footer>
-      <p>© 2025 Music.ia. Tous droits réservés.</p>
-    </footer>
-  </div>
-</body>
-</html>
+</main>
+
+<!-- FOOTER CORRECTEMENT STRUCTURÉ -->
+<footer class="rect-footer">
+  <p>© 2025 Music.ia. Tous droits réservés.</p>
+</footer>

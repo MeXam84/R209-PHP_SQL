@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body> 
+<body>
 <header class="navbar">
     <div class="nav-left">
     <a href="main.php" style="color: #242124;">
@@ -29,22 +29,17 @@
     </div>
   </header>
 
-  <div class="container">
-    <div class="main">
-    <h1>
-      This is the title
-    </h1>
-    <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
-    <a href="catalogue.php">accès au catalogue</a>
-    
-  </div>
-</div>
-  
-  <div class="rect-footer">
-    <footer>
+  <div class="page"> <!-- DOIT contenir le contenu + footer -->
+    <main class="main">
+      <h1>This is the title</h1>
+      <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
+      <a href="catalogue.php">accès au catalogue</a>
+    </main>
+
+    <footer class="rect-footer">
       <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>
   </div>
-
+  
 </body>
 </html>
