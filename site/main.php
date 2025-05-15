@@ -28,13 +28,9 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </a>  
         </div>
     <div class="nav-right"> 
-      <i class="fa fa-search" style="color: #242124;"></i> 
-      <a href="panier.php" style="color: #242124;">
-      <i class="fa fa-shopping-cart"></i>
-</a>
-      <a href="login.php" style="color: #242124;">
-  <i class="fa fa-user-circle"></i>
-</a>
+    <a href="catalogue.php" style="color: #242124;"><i class="fa fa-search"></i></a>       
+    <a href="panier.php" style="color: #242124;"><i class="fa fa-shopping-cart"></i></a>
+      <a href="login.php" style="color: #242124;"><i class="fa fa-user-circle"></i></a>
     </div>
   </header>
 
