@@ -70,8 +70,9 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <select name="style" id="style">
                 <option value="">Tous</option>
                 <?php foreach ($styles as $style): ?>
-                    <option value="<?php echo htmlspecialchars($style); ?>" <?php if ($_GET['style'] ?? '' == $style) echo 'selected'; ?>>
-                        <?php echo htmlspecialchars($style); ?>
+                    <option value="<?= htmlspecialchars($style) ?>" 
+                        <?= (isset($_GET['style']) && $_GET['style'] === $style) ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($style) ?>
                     </option>
                 <?php endforeach; ?>
             </select>

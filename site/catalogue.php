@@ -54,7 +54,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </a>  
     </div>
     <div class="nav-right"> 
-        <a href="catalogue.php" style="color: #242124;"><i class="fa fa-search"></i></a> 
+        <i class="fa fa-search" style="color: #242124;"></i> 
         <a href="panier.php" style="color: #242124;"><i class="fa fa-shopping-cart"></i></a>
         <a href="login.php" style="color: #242124;"><i class="fa fa-user-circle"></i></a>
     </div>
@@ -70,8 +70,9 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <select name="style" id="style">
                 <option value="">Tous</option>
                 <?php foreach ($styles as $style): ?>
-                    <option value="<?php echo htmlspecialchars($style); ?>" <?php if ($_GET['style'] ?? '' == $style) echo 'selected'; ?>>
-                        <?php echo htmlspecialchars($style); ?>
+                    <option value="<?= htmlspecialchars($style) ?>" 
+                        <?= (isset($_GET['style']) && $_GET['style'] === $style) ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($style) ?>
                     </option>
                 <?php endforeach; ?>
             </select>
