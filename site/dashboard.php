@@ -42,13 +42,11 @@ if (!isset($_SESSION['username'])) {
       
     </div>
   </div>
-
-  <div class="rect-footer">
-    <footer>
+  <div class="footer_dashboard">
+  <footer class="rect-footer">
       <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>
-  </div>
-
+    </div>
 
 </body>
 </html>

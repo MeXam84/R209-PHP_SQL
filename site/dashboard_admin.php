@@ -80,9 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 
 <!-- FOOTER CORRECTEMENT STRUCTURÉ -->
+<div class="footer_dashboard_admin">
 <footer class="rect-footer">
   <p>© 2025 Music.ia. Tous droits réservés.</p>
 </footer>
-
+</div>
 </body>
 </html>

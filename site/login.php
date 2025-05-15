@@ -59,6 +59,7 @@ if (isset($_SESSION['username'])) {
     <br>
 
 <!-- FOOTER CORRECTEMENT STRUCTURÉ -->
+
 <footer class="rect-footer">
       <p>© 2025 Music.ia. Tous droits réservés.</p>
     </footer>

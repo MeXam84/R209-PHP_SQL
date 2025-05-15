@@ -238,3 +238,11 @@ select:focus {
   background-color: #315E65;
   transform: scale(0.98);
 }
+
+.footer_dashboard {
+  margin-top: 300px;
+}
+
+.footer_dashboard_admin {
+  margin-top: 90px;
+}
