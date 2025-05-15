@@ -37,8 +37,8 @@ if (isset($_SESSION['username'])) {
     </div>
   </header>
 
-  <div class="container">
-    <div class="main">
+  <div class="container_login"> 
+    <main class="main">
     <form method="POST" action="script_login.php">
         <label>Login:</label>
         <input type="text" name="username" required><br><br>
@@ -55,12 +55,13 @@ if (isset($_SESSION['username'])) {
     <?php endif; ?>
 
   </div>
-</div>
+    </main>
+    <br>
 
 <!-- FOOTER CORRECTEMENT STRUCTURÉ -->
 <footer class="rect-footer">
-  <p>© 2025 Music.ia. Tous droits réservés.</p>
-</footer>
+      <p>© 2025 Music.ia. Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>

@@ -5,29 +5,37 @@ session_start();
 $pdo = new PDO('sqlite:SQL.db');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Récupère les données du formulaire
+// Récupération des données du formulaire
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
 
-// Vérifie si les champs sont vides
+// Redirection si les champs sont vides
 if (empty($username) || empty($password)) {
     header('Location: login.php?error=empty');
     exit;
 }
 
-// Recherche l'utilisateur dans la base de données
+// Requête sécurisée pour récupérer l'utilisateur
 $stmt = $pdo->prepare('SELECT * FROM Users WHERE Nom_users = ?');
 $stmt->execute([$username]);
-$user = $stmt->fetch();
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Vérifie si l'utilisateur existe et si le mot de passe est correct
+// Vérification du mot de passe
 if ($user && password_verify($password, $user['Password'])) {
-    // Connexion réussie, démarrer la session et rediriger
-    $_SESSION['username'] = $username;
-    header('Location: dashboard.php');
+    // Stockage des infos dans la session
+    $_SESSION['username'] = $user['Nom_users'];
+    $_SESSION['perm'] = $user['Perm']; // 'admin' ou autre
+
+    // Redirection selon les permissions
+    if ($user['Perm'] === 'admin') {
+        header('Location: dashboard_admin.php');
+    } else {
+        header('Location: dashboard.php');
+    }
     exit;
 } else {
-    // Identifiants incorrects, redirige vers login avec message d'erreur
+    // Identifiants incorrects
     header('Location: login.php?error=invalid_credentials');
     exit;
 }
+?>
