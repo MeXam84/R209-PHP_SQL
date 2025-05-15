@@ -40,12 +40,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="page"> <!-- DOIT contenir le contenu + footer -->
     <main class="main">
-      <h1>Bienvenue sur Music.ia</h1>
-      <p>This is a paragraph paragraphparagraphpararrrrrgrapaaaaaaaaaah.</p>
-    </main>
-
-
-<!-- Top Vente -->
+     <!-- Top Vente -->
  <h1 style="text-align:center;">Meilleur Vente</h1> 
     <div class="catalogue">
         <?php foreach ($produits as $produit): ?>
@@ -61,6 +56,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <a href="catalogue.php" class="bouton-plus">Voir plus</a>
 </div>
 </div>
+    </main>
 <br>
 
     <footer class="rect-footer">
