@@ -191,3 +191,49 @@ justify-content: center;
     text-align: center;
     margin-top: 20px;
 }
+
+select {
+  padding: 10px 14px;
+  border: 2px solid #315E65;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+  appearance: none;         /* Supprime le style par défaut */
+  -webkit-appearance: none; /* Pour Chrome */
+  -moz-appearance: none;    /* Pour Firefox */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+  width: 250px;
+}
+
+select:focus {
+  border-color: #315E65;
+  outline: none;
+  background-color: #fff;
+}
+
+.filtre {
+  padding: 10px 20px;
+  background-color: #315E65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filtre:hover {
+  background-color: #315E65;
+  transform: scale(1.05);
+}
+
+.filtre:active {
+  background-color: #315E65;
+  transform: scale(0.98);
+}

@@ -86,9 +86,9 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
             </select>
 
-            <button type="submit">Filtrer</button>
+            <button class="filtre" type="submit">Filtrer</button>
         </form>
-
+        <br>
         <!-- AFFICHAGE DES PRODUITS -->
         <div class="catalogue">
             <?php if ($produits): ?>
