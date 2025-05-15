@@ -41,10 +41,10 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
 </a>
     </div>
 </header>
-  <h1 style="text-align:center;">Catalogue de produits</h1>
 <!-- CONTENU DE LA PAGE -->
-<main>
-  <h1 style="text-align:center;">Catalogue de produits</h1>
+<div class="page">
+  <main class="main">
+<h1 style="text-align:center;">Catalogue de produits</h1>
   <div class="catalogue">
     <?php foreach ($produits as $produit): ?>
       <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
@@ -53,6 +53,7 @@ $produits = $db->query('SELECT * FROM Music')->fetchAll(PDO::FETCH_ASSOC);
         <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
       </a>
     <?php endforeach; ?>
+  </div>
   </div>
 </main>
 
