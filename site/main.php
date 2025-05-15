@@ -41,7 +41,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <div class="page"> <!-- DOIT contenir le contenu + footer -->
     <main class="main">
      <!-- Top Vente -->
- <h1 style="text-align:center;">Meilleur Vente</h1> 
+ <h1 style="text-align:center;">Meilleurs Ventes</h1> 
     <div class="catalogue">
         <?php foreach ($produits as $produit): ?>
             <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
