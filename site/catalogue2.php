@@ -9,7 +9,7 @@ try {
 
 // Récupération des styles et artistes distincts pour les filtres
 $styles = $db->query('SELECT DISTINCT Style FROM Music ORDER BY Style')->fetchAll(PDO::FETCH_COLUMN);
-// $artistes = $db->query('SELECT DISTINCT Artiste FROM Music ORDER BY Artiste')->fetchAll(PDO::FETCH_COLUMN);
+$artistes = $db->query('SELECT DISTINCT Nom_artiste FROM Artiste ORDER BY Nom_artiste')->fetchAll(PDO::FETCH_COLUMN);
 
 // Construction de la requête avec filtres
 $conditions = [];
