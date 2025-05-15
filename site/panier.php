@@ -34,6 +34,9 @@
   </header>
 
   <div class="container">
+    <main class="main">
+      <h1 style="text-align:center;">Mon Panier</h1>
+      <p style="text-align:center;">Vous n'avez pas encore ajouté de produits à votre panier.</p>
     <div class="static-part">
       <h3>Mon panier</h3>
     </div>
@@ -44,6 +47,7 @@
       
       <!-- Ajoute ici plus de widgets pour voir l'agrandissement -->
     </div>
+</main>
   </div>
 
  <!-- FOOTER CORRECTEMENT STRUCTURÉ -->

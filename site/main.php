@@ -38,7 +38,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </header>
 
-  <div class="page"> <!-- DOIT contenir le contenu + footer -->
+ 
     <main class="main">
      <!-- Top Vente -->
  <h1 style="text-align:center;">Meilleur Vente</h1> 
@@ -54,7 +54,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <div class="bouton-container">
   <a href="catalogue.php" class="bouton-plus">Voir plus</a>
-</div>
+
 </div>
     </main>
 <br>
