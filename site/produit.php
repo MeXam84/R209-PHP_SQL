@@ -66,7 +66,7 @@ if (!$produit) {
         <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png" alt="<?php echo htmlspecialchars($produit['Nom_music']); ?>">
         <p><?php echo htmlspecialchars($produit['Description']); ?></p>
         <audio controls src="song/<?php echo htmlspecialchars($produit['Id_music']); ?>.mp3"></audio>
-        <p class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></p>
+        <p class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?>€</p>
         <form method="post" action="ajouter_panier.php?id=<?= $produit['Id_music'] ?>">
             <input type="hidden" name="produit_id" value="<?php echo $produit['Id_music']; ?>">
             <button type="submit" class="bouton-panier">Ajouter au panier</button>

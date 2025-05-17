@@ -105,7 +105,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <a class="carte-produit" href="produit.php?id=<?php echo $produit['Id_music']; ?>">
                         <img src="img_music/<?php echo htmlspecialchars($produit['Id_music']); ?>.png">
                         <div class="nom-produit"><?php echo htmlspecialchars($produit['Nom_music']); ?></div>
-                        <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?></div>
+                        <div class="prix"><?php echo htmlspecialchars($produit['Prix'], 2); ?>€</div>
                     </a>
                 <?php endforeach; ?>
             <?php else: ?>
