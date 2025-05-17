@@ -27,13 +27,8 @@ if ($user && password_verify($password, $user['Password'])) {
     $_SESSION['username'] = $user['Nom_users'];
     $_SESSION['perm'] = $user['Perm']; // 'admin' ou autre
 
-    // Redirection selon les permissions
-    if ($user['Perm'] === 'admin') {
-        header('Location: dashboard_admin.php');
-    } else {
-        header('Location: dashboard.php');
-    }
-    exit;
+    // Redirection vers le page du compte
+    header('Location: dashboard.php');
 } else {
     // Identifiants incorrects
     header('Location: login.php?error=invalid_credentials');
