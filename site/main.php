@@ -49,7 +49,7 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
 <div class="bouton-container">
-  <a href="catalogue.php" class="bouton-plus">Voir plus</a>
+  <a href="catalogue.php" class="bouton">Voir plus</a>
 
 </div>
     </main>
