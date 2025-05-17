@@ -9,23 +9,27 @@ try {
 
 // Récupération des styles et artistes distincts pour les filtres
 $styles = $db->query('SELECT DISTINCT Style FROM Music ORDER BY Style')->fetchAll(PDO::FETCH_COLUMN);
-$artistes = $db->query('SELECT DISTINCT Nom_artiste FROM Artiste ORDER BY Nom_artiste')->fetchAll(PDO::FETCH_COLUMN);
+$artistes = $db->query('SELECT Id_artiste, Nom_artiste FROM Artiste ORDER BY Nom_artiste')->fetchAll(PDO::FETCH_ASSOC);
 
 // Construction de la requête avec filtres
 $conditions = [];
 $params = [];
 
 if (!empty($_GET['style'])) {
-    $conditions[] = 'Style = :style';
+    $conditions[] = 'Music.Style = :style';
     $params[':style'] = $_GET['style'];
 }
 
 if (!empty($_GET['artiste'])) {
-    $conditions[] = 'Artiste = :artiste';
+    $conditions[] = 'Artiste.Id_artiste = :artiste';
     $params[':artiste'] = $_GET['artiste'];
 }
 
-$sql = 'SELECT * FROM Music';
+// Requête principale avec jointure pour récupérer le nom de l'artiste
+$sql = 'SELECT Music.*, Artiste.Nom_artiste 
+        FROM Music 
+        JOIN Artiste ON Music.Id_artiste = Artiste.Id_artiste';
+
 if ($conditions) {
     $sql .= ' WHERE ' . implode(' AND ', $conditions);
 }
@@ -66,29 +70,31 @@ $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <!-- FORMULAIRE DE FILTRE -->
         <form method="get" class="filtre-form">
-            <label for="style">Style :</label>
-            <select name="style" id="style">
-                <option value="">Tous</option>
-                <?php foreach ($styles as $style): ?>
-                    <option value="<?= htmlspecialchars($style) ?>" 
-                        <?= (isset($_GET['style']) && $_GET['style'] === $style) ? 'selected' : '' ?>>
-                        <?= htmlspecialchars($style) ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+    <label for="style">Style :</label>
+    <select name="style" id="style">
+        <option value="">Tous</option>
+        <?php foreach ($styles as $style): ?>
+            <option value="<?= htmlspecialchars($style) ?>" 
+                <?= (isset($_GET['style']) && $_GET['style'] === $style) ? 'selected' : '' ?>>
+                <?= htmlspecialchars($style) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
 
-            <label for="artiste">Artiste :</label>
-            <select name="artiste" id="artiste">
-                <option value="">Tous</option>
-                <?php foreach ($artistes as $artiste): ?>
-                    <option value="<?php echo htmlspecialchars($artiste); ?>" <?php if ($_GET['artiste'] ?? '' == $artiste) echo 'selected'; ?>>
-                        <?php echo htmlspecialchars($artiste); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+    <label for="artiste">Artiste :</label>
+    <select name="artiste" id="artiste">
+        <option value="">Tous</option>
+        <?php foreach ($artistes as $artiste): ?>
+            <option value="<?= $artiste['Id_artiste'] ?>" 
+                <?= (isset($_GET['artiste']) && $_GET['artiste'] == $artiste['Id_artiste']) ? 'selected' : '' ?>>
+                <?= htmlspecialchars($artiste['Nom_artiste']) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
 
-            <button class="filtre" type="submit">Filtrer</button>
-        </form>
+    <button class="filtre" type="submit">Filtrer</button>
+</form>
+
         <br>
         <!-- AFFICHAGE DES PRODUITS -->
         <div class="catalogue">
