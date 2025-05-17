@@ -34,6 +34,8 @@ if ($conditions) {
     $sql .= ' WHERE ' . implode(' AND ', $conditions);
 }
 
+$sql .= ' ORDER BY Music.Nom_music ASC'; // Tri par ordre alphabétique
+
 $stmt = $db->prepare($sql);
 $stmt->execute($params);
 $produits = $stmt->fetchAll(PDO::FETCH_ASSOC);

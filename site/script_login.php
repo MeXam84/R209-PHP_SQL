@@ -23,6 +23,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 // Vérification du mot de passe
 if ($user && password_verify($password, $user['Password'])) {
     // Stockage des infos dans la session
+    $_SESSION['id_users'] = $user['Id_users'];
     $_SESSION['username'] = $user['Nom_users'];
     $_SESSION['perm'] = $user['Perm']; // 'admin' ou autre
 
