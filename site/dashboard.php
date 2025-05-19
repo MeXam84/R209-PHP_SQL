@@ -39,7 +39,7 @@ if (!isset($_SESSION['username'])) {
   <h1>Bienvenue, <?php echo htmlspecialchars($_SESSION['username']); ?> !</h1>
     <p>Vous êtes connecté.</p>
     <?php if ($_SESSION['perm'] === 'admin'): ?>
-      <a href="dashboard_admin.php">Accès au panel Admin</a>
+      <a href="lst_produit.php">Gestionnaire de produit</a>
     <?php endif; ?>
     <a href="logout.php">Se déconnecter</a>
       
