@@ -165,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <footer>
-    <p>© 2025 Music.ia</p>
+    <p>© 2025 Music.ia. Tous droit réservé</p>
 </footer>
 </body>
 </html>
