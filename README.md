@@ -46,6 +46,8 @@ Télécharger php via la commande `sudo apt install php`
 
 5. **Pour aller sur le site**
    Pour aller sur le site il faut taper `localhost:8000/main.php` dans la barre de recherche du navigateur pour accèder à la page d'acceuil.
+
+---
  
 ## 📄 Pages du site
 
