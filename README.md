@@ -1,8 +1,6 @@
-<html lang="fr">
-
 # 🎵 R209 - Site de Vente de Musique (PHP & SQL)
 
-Projet réalisé dans le cadre de la SAE R209, consistant à développer un site dynamique de vente de musique en PHP, avec une base de données SQLite.
+Projet réalisé dans le cadre du cours R209, consistant à développer un site dynamique de vente en PHP, avec une base de données SQLite.
 
 ## 🔧 Technologies utilisées
 
