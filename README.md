@@ -32,7 +32,7 @@ Projet réalisé dans le cadre de la SAE R209, consistant à développer un site
    Démarrez le module **Apache**.
 
 4. **Accéder au site**  
-   Dans votre navigateur, entrez l'une des adresses suivantes : **localhost/site** ou **127.0.0.1/site**
+   Dans votre navigateur, entrez l'une des adresses suivantes `localhost/site` ou `127.0.0.1/site`
 
 > [!NOTE]
 > Rajoutez `main.php` a la fin de l'URL si la page ne s'affichent pas directement
