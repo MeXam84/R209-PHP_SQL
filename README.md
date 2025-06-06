@@ -58,24 +58,10 @@ Chaque page du site est dynamique et utilise PHP pour interagir avec la base de 
 - `register.php` : création de compte utilisateur
 - `catalogue.php` : affichage de tous les morceaux disponibles
 - `artiste.php` : page dédiée à un artiste (bio, albums, etc.)
-- `son.php` : page détaillée d’un morceau avec options d’achat
+- `peoduit.php` : page détaillée d’un morceau avec options d’achat
 - `panier.php` : gestion du panier (ajout, suppression, validation)
 
-Des fichiers annexes assurent les connexions à la base (`config.php`, `connexion.php`, etc.) et la gestion des sessions utilisateur.
-
----
-
-## 🗃️ Structure de la base de données
-
-Voici un exemple simplifié des tables principales (à adapter selon votre base réelle) :
-
-- **utilisateurs** : `id`, `email`, `mot_de_passe`, `nom`, `prenom`
-- **artistes** : `id`, `nom`, `bio`
-- **sons** : `id`, `titre`, `duree`, `prix`, `id_artiste`
-- **paniers** : `id`, `id_utilisateur`
-- **panier_sons** : `id_panier`, `id_son`, `quantite`
-
-La base doit être importée via **phpMyAdmin** ou un script SQL fourni (`database.sql` s’il existe).
+Des fichiers annexes assurent les connexions à la base (`ajout_produit.php`, `script_login.php`, etc.) et la gestion des sessions utilisateur.
 
 ---
 
