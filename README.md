@@ -1,20 +1,22 @@
+<html lang="fr">
+
 # 🎵 R209 - Site de Vente de Musique (PHP & SQL)
 
-Projet réalisé dans le cadre de la SAE R209, consistant à développer un site dynamique de vente de musique en PHP, avec une base de données MySQL.
+Projet réalisé dans le cadre de la SAE R209, consistant à développer un site dynamique de vente de musique en PHP, avec une base de données SQLite.
 
 ## 🔧 Technologies utilisées
 
 - PHP
-- MySQL
+- SQLite
 - HTML/CSS
-- XAMPP (Apache + MySQL)
+- XAMPP (Apache)
 - Navigateur web (Chrome, Firefox...)
 
 ## 🚀 Installation & Lancement
 
 ### Pré-requis
 
-- [XAMPP](https://www.apachefriends.org/fr/index.html) installé sur votre machine (ou un serveur Apache/MySQL équivalent)
+- [XAMPP](https://www.apachefriends.org/fr/index.html) installé sur votre machine (ou un serveur Apache équivalent)
 - Un éditeur de texte comme VS Code, Sublime Text, ou autre
 
 ### Étapes Windows
@@ -27,10 +29,14 @@ Projet réalisé dans le cadre de la SAE R209, consistant à développer un site
    `C:\xampp\htdocs\`
 
 3. **Lancer XAMPP**  
-   Démarrez le module **Apache** (et **MySQL** si vous devez configurer ou visualiser la base).
+   Démarrez le module **Apache**.
 
 4. **Accéder au site**  
-   Dans votre navigateur, entrez l'une des adresses suivantes :  
+   Dans votre navigateur, entrez l'une des adresses suivantes : **localhost/site** ou **127.0.0.1/site**
+
+> [!NOTE]
+> Rajoutez `main.php` a la fin de l'URL si la page ne s'affichent pas directement
+
 ###  Étapes Linux
 
 1. **Télécharger php**
@@ -58,7 +64,7 @@ Chaque page du site est dynamique et utilise PHP pour interagir avec la base de 
 - `register.php` : création de compte utilisateur
 - `catalogue.php` : affichage de tous les morceaux disponibles
 - `artiste.php` : page dédiée à un artiste (bio, albums, etc.)
-- `peoduit.php` : page détaillée d’un morceau avec options d’achat
+- `produit.php` : page détaillée d’un morceau avec ajout au pannier
 - `panier.php` : gestion du panier (ajout, suppression, validation)
 
 Des fichiers annexes assurent les connexions à la base (`ajout_produit.php`, `script_login.php`, etc.) et la gestion des sessions utilisateur.
@@ -75,6 +81,6 @@ Projet réalisé par :
 
 ## 📌 Remarques
 
-- Le projet a été testé sous Windows avec XAMPP rt linux via **PHP**.
+- Le projet a été testé sous Windows avec XAMPP et linux via **PHP**.
 - Vérifiez que le module `mysql` est activé dans votre configuration PHP.
-- N'oubliez pas de lancer Apache **et** MySQL avant d'accéder au site.
+- N'oubliez pas de lancer **Apache** avant d'accéder au site.
